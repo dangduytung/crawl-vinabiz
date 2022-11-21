@@ -43,6 +43,7 @@ logger.setLevel(logging.DEBUG)  # Setting INFO for deploy PRODUCT
 formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s',
                               '%m-%d-%Y %H:%M:%S')
 
+sys.stdout.reconfigure(encoding='utf-8')
 stdout_handler = logging.StreamHandler(sys.stdout)
 stdout_handler.setLevel(logging.DEBUG)
 stdout_handler.setFormatter(formatter)
